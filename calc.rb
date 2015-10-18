@@ -14,7 +14,7 @@ response_length = gets.chomp
     puts "Do you want to convert euros or dollars?"
     response_currency = gets.chomp
     check_currency(response_currency)
-else "please pick length or temperature"
+  else "please pick length, temperature, or currency"
 end
 end
 
@@ -67,9 +67,9 @@ def conversion_temp(unit)
 
 def check_currency(unit)
   if unit == "euros"
-    conversion_length("E")
+    conversion_currency("E")
   elsif unit == "dollars"
-    conversion_length("D")
+    conversion_currency("D")
   else
     puts "Please put in euros or dollars"
   end
@@ -83,7 +83,7 @@ def conversion_currency(unit)
    elsif unit == "D"
     puts "How many dollars do you want to convert?"
  number = gets.chomp.to_f
-    number / 1.13
+   number / 1.13
    end
  end
 
